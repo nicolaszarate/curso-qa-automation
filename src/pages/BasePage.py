@@ -142,3 +142,16 @@ class BasePage:
        logging.info(f"Hover realizado sobre el elemento: {hover_locator}")
        logging.info(f"Haciendo clic en el elemento después del hover: {hover_locator}")
        hover_element.click()
+
+       # Se usa para emular la accion de flecha para abajo y apretar enter
+
+       def select_dropdown(self, web_elements):
+           element = self.wait_for_element(web_elements)
+           element.send_keys(Keys.DOWN, Keys.ENTER)
+
+       # Pone el foco en una nueva ventana
+
+       def switch_to_new_window(self):
+           WebDriverWait(self.driver, 10).until(lambda driver: len(driver.window_handles) > 1)
+           nueva_ventana = self.driver.window_handles[1]
+           self.driver.switch_to.window(nueva_ventana)

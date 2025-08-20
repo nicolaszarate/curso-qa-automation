@@ -1,0 +1,10 @@
+{
+ "url": "https://demoqa.com/automation-practice-form",
+ "firstname": "nicolas",
+ "lastname": "zarate",
+ "email": "nicolasezarate@gmail.com",
+ "mobile": "1144044288",
+ "date": "05/03/1998",
+ "hobbies": ["Sports"],
+ "direccion": "Rio Carcarana 128"
+}
